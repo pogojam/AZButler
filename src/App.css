@@ -1,0 +1,103 @@
+.App {
+  text-align: center;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+body {
+  background-color: black;
+}
+
+.logo{
+  width:30vw;
+  margin-left: 50%;
+  margin-top:50vh;
+  transform: translate(-50%,-50%);
+  fill: white ;
+  margin-bottom: 0;
+}
+.btn{
+  margin: auto;
+  margin-top: 0px;
+  font-size: 16px;
+  color: black;
+  display: block;
+  text-decoration: none;
+  font-family: PoiretOne-Regular, Poiret One;
+  background-color: white;
+  border: none;
+  font-size: 2.6em;
+}
+
+.cls-1 , .cls-2{
+opacity: 0;
+font-size:80.01px;
+font-family:PoiretOne-Regular, Poiret One;
+fill: none;
+paint-order: stroke;
+stroke:white;
+stroke-width:1px;
+}
+.cls-2{
+  font-size:80.01px;
+  font-family:PoiretOne-Regular, Poiret One;
+  fill: none;
+  paint-order: stroke;
+  stroke:white;
+  stroke-width:1px;
+  transform:translate(237.62px, 205.87px);
+  
+}
+
+.cls-3{
+  letter-spacing:-0.04em;
+}
+
+.logo_active{
+
+margin-left: 0;
+transform: translate(0%,-50%);
+transition: all 0.5s ease-in-out;
+}
+
+.info{
+  list-style: none;
+  font-family: PoiretOne-Regular, Poiret One;
+  font-size: 1.4em;
+  color: white;
+  position: absolute;
+  top: 40vh;
+  left: 50%;
+  transform: translate(-50%,50%);
+}
+.info ul {
+  font-size: .7em;
+  list-style: none;
+  padding: 1em;
+}
+
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
