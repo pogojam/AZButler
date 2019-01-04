@@ -19,9 +19,8 @@ class App extends Component {
   }
 
   animateIn (){
-    let el_line = document.querySelector('.cls-4'),
-        el_butler = document.querySelector('.cls-2')
-    let tl = anime.timeline({
+    const el_line = document.querySelector('.cls-4')
+    const tl = anime.timeline({
         elasticity:0,
         duration:3000
     })
@@ -41,13 +40,13 @@ class App extends Component {
   }
 
   animateOut (){
-    let el_line = document.querySelector('.cls-4'),
+    const el_line = document.querySelector('.cls-4'),
         el_butler = document.querySelector('.cls-2'),
         el_az = document.querySelector('.cls-1'),
         logo_whole = document.querySelector('.logo'),
         button = document.querySelector('.btn')
 
-    let tl = anime.timeline({
+    const tl = anime.timeline({
       duration:1000,
       elasticity:0,
       complete: ()=>{this.handleClick()}
@@ -87,31 +86,25 @@ class App extends Component {
   }
 
   render() {
-    if (this.state.active){
-     return <div className="App">
-       <Logo ></Logo>
+
+   const {active} = this.state
+
+    return <div className="App">
+       <Logo />
       <Enterbutton clickAction={this.animateOut.bind(this)} ></Enterbutton>
-      <Info></Info>
+      {active && <Info/>}
       </div>
-    }
-   else{
-    return (
-      <div className="App">
-       <Logo ></Logo>
-      <Enterbutton clickAction={this.animateOut.bind(this)} ></Enterbutton>
-      </div>
-    );
-   } 
   }
+  
 }
 
-let Enterbutton = (props)=>{
+const Enterbutton = (props)=>{
   return <button className={'btn'} onClick={props.clickAction} > Enter </button>
 }
 
 
 
-let Logo = ()=>{
+const Logo = ()=>{
  return <svg  className={'logo'} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412.53 410.84">
   <defs>
   </defs>
@@ -127,7 +120,7 @@ let Logo = ()=>{
 </svg>
 }
 
-let Info = ()=>{
+const Info = ()=>{
   return <div className={'info animated fadeInDown'} >
   <ul>
     <li>Butler Services</li>
